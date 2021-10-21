@@ -12,7 +12,7 @@ fetch-resources:
 project: prepare fetch-resources
 	@vivado -mode batch -source scripts/create_project.tcl -notrace -nojournal -tempDir work -log work/vivado.log
 
-package:
+package: fetch-resources
 	python3 setup.py sdist bdist_wheel
 
 clean:
